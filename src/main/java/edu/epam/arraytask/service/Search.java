@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 public class Search {
 
-    final int FIRST_ELEMENT = 0;
-
     public int binarySearch(Array array, int key, int low, int high) {
 
         int index = -1;
@@ -27,7 +25,8 @@ public class Search {
     }
 
     public int findMax(Array array) {
-        int max = array.getValue(array.getValue(array.size() - 1));
+        final int LAST_ELEMENT_INDEX = array.size() - 1;
+        int max = array.getValue(LAST_ELEMENT_INDEX);
         for (int i = array.size() - 1; i >= 0; i--) {
             if (array.getValue(i) > max) {
                 max = array.getValue(i);
@@ -37,8 +36,9 @@ public class Search {
     }
 
     public int findMin(Array array) {
-        int min = array.getValue(FIRST_ELEMENT);
-        for (int i = FIRST_ELEMENT; i < array.size(); i++) {
+        final int FIRST_ELEMENT_INDEX = 0;
+        int min = array.getValue(FIRST_ELEMENT_INDEX);
+        for (int i = 0; i < array.size(); i++) {
             if (array.getValue(i) < min) {
                 min = array.getValue(i);
             }
@@ -49,7 +49,7 @@ public class Search {
     public ArrayList<Integer> findPrimeNumbers(Array array) {
         final int MAX_COUNTER_NUMBER = 2;
         ArrayList<Integer> primeArray = new ArrayList<>();
-        for (int i = FIRST_ELEMENT; i < array.size(); i++) {
+        for (int i = 0; i < array.size(); i++) {
             if (array.getValue(i) > 1) {
                 int counter = 0;
                 for (int j = 2; j <= array.getValue(i); j++) {
@@ -90,7 +90,7 @@ public class Search {
     public ArrayList<Integer> findNumbersWithDifferentDigits(Array array){
         ArrayList<Integer> differentDigitArray = new ArrayList<>();
 
-        for (int i = FIRST_ELEMENT; i < array.size(); i++){
+        for (int i = 0; i < array.size(); i++){
             int number = array.getValue(i);
             String numberString = Integer.toString(number);
             if (numberString.length() == 3){

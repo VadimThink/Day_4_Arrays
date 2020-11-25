@@ -8,7 +8,7 @@ public class ArraySorting {
         for (int i = array.size() - 1; i >= 1; i--) {
             for (int j = 0; j < i; j++) {
                 if (array.getValue(j) > array.getValue(j + 1)) {
-                    array.swapElements(j, j + 1);
+                    swapElements(array, j, j + 1);
                 }
             }
         }
@@ -59,8 +59,14 @@ public class ArraySorting {
                     minInd = i;
                 }
             }
-            array.swapElements(left, minInd);
+            swapElements(array, left, minInd);
         }
+    }
+
+    public void swapElements(Array array, int firstIndex, int secondIndex){
+        int temp = array.getValue(firstIndex);
+        array.setValue(array.getValue(secondIndex), firstIndex);
+        array.setValue(temp, secondIndex );
     }
 
 

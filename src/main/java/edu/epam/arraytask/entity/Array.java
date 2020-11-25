@@ -42,11 +42,6 @@ public class Array {
         }
     }
 
-    public void swapElements(int firstIndex, int secondIndex){
-        int temp = array[firstIndex];
-        array[firstIndex] = array[secondIndex];
-        array[secondIndex] = temp;
-    }
 
     public int size(){
         return array.length;
