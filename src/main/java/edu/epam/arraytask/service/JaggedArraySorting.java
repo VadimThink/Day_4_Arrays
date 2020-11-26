@@ -1,7 +1,5 @@
 package edu.epam.arraytask.service;
 
-import edu.epam.arraytask.entity.Array;
-
 public class JaggedArraySorting {
 
     public int findSumArrayElements(int[] array) {

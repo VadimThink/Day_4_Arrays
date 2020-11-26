@@ -1,8 +1,6 @@
 package edu.epam.arraytask.service;
 
 import edu.epam.arraytask.entity.Array;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;

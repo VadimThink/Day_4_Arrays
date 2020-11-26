@@ -27,10 +27,11 @@ public class ArrayInput {
     }
 
     public Array inputFile() {
+        final String fileName = "Input.txt";
         ArrayList<Integer> baseArray = new ArrayList<>();
         int size = 0;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Input.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
             String firstLine = reader.readLine();
             size = Integer.parseInt(firstLine);
             String line = reader.readLine();
