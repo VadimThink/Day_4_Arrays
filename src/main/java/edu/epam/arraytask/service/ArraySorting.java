@@ -63,7 +63,7 @@ public class ArraySorting {
         }
     }
 
-    public void swapElements(Array array, int firstIndex, int secondIndex){
+    private void swapElements(Array array, int firstIndex, int secondIndex){
         int temp = array.getValue(firstIndex);
         array.setValue(array.getValue(secondIndex), firstIndex);
         array.setValue(temp, secondIndex );

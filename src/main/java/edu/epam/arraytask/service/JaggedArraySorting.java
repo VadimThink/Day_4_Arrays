@@ -1,42 +1,8 @@
 package edu.epam.arraytask.service;
 
+import java.util.Comparator;
+
 public class JaggedArraySorting {
-
-    public int findSumArrayElements(int[] array) {
-        int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            sum += array[i];
-        }
-        return sum;
-    }
-
-    public int findMax(int[] array) {
-        final int LAST_ELEMENT_INDEX = array.length - 1;
-        int max = array[LAST_ELEMENT_INDEX];
-        for (int i = array.length - 1; i >= 0; i--) {
-            if (array[i] > max) {
-                max = array[i];
-            }
-        }
-        return max;
-    }
-
-    public int findMin(int[] array) {
-        final int FIRST_ELEMENT_INDEX = 0;
-        int min = array[FIRST_ELEMENT_INDEX];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < min) {
-                min = array[i];
-            }
-        }
-        return min;
-    }
-
-    public void swapArrays(int[][] jaggedArray, int firstIndex, int secondIndex) {
-        int[] temp = jaggedArray[firstIndex];
-        jaggedArray[firstIndex] = jaggedArray[secondIndex];
-        jaggedArray[secondIndex] = temp;
-    }
 
     public void sumSort(int[][] jaggedArray) {
         for (int i = jaggedArray.length - 1; i >= 1; i--) {
@@ -72,6 +38,42 @@ public class JaggedArraySorting {
                 }
             }
         }
+    }
+
+    private int findSumArrayElements(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
+    }
+
+    private int findMax(int[] array) {
+        final int LAST_ELEMENT_INDEX = array.length - 1;
+        int max = array[LAST_ELEMENT_INDEX];
+        for (int i = array.length - 1; i >= 0; i--) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+
+    private int findMin(int[] array) {
+        final int FIRST_ELEMENT_INDEX = 0;
+        int min = array[FIRST_ELEMENT_INDEX];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        return min;
+    }
+
+    private void swapArrays(int[][] jaggedArray, int firstIndex, int secondIndex) {
+        int[] temp = jaggedArray[firstIndex];
+        jaggedArray[firstIndex] = jaggedArray[secondIndex];
+        jaggedArray[secondIndex] = temp;
     }
 
 

@@ -27,7 +27,7 @@ public class ArrayInput {
     }
 
     public Array inputFile() {
-        final String fileName = "Input.txt";
+        final String fileName = "files\\Input.txt";
         ArrayList<Integer> baseArray = new ArrayList<>();
         int size = 0;
         try {
